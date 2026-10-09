@@ -1,0 +1,10 @@
+name: build and deploy
+on: [ push, pull_request]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v1
+  
