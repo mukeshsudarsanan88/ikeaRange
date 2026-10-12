@@ -6,9 +6,9 @@ public class HelloController {
         return "Product ID: " + productId;
 }
 
-  @PostMapping
+  @PostMapping(path ="/product/{ownerId}/create", consumes = "application/json")
 	@ResponseStatus(HttpStatus.CREATED)
-	public void add(@RequestBody Person person) {
+	public void add(@PathVariable Long ownerId,@RequestBody Prodct product) {
     
   }
 }
